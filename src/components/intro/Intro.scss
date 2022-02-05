@@ -36,9 +36,7 @@
         // transform:rotate(-10deg);
 
         @include mobile{
-          height: 50%;
-          margin-top: auto;
-          align-self: baseline;
+          height: 60%;
         }
       }
     }
