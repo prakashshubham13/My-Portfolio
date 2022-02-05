@@ -37,6 +37,8 @@
 
         @include mobile{
           height: 50%;
+          margin-top: auto;
+          align-self: baseline;
         }
       }
     }
