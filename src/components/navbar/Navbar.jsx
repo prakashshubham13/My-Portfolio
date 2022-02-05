@@ -1,6 +1,7 @@
 import './Navbar.scss'
 // import EmailIcon from '@material-ui/icons/Email';
 // import {PersonIcon} from '@mui/icons-material';
+import { Person, Mail } from "@material-ui/icons";
 
 const Navbar = ({ menuOpen, setMenuOpen }) => {
   return (
@@ -11,9 +12,11 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
             Achiever
           </a>
           <div className="itemContainer">
+          <Person className="icon" />
             <span>+6204266219</span>
           </div>
           <div className="itemContainer">
+           <Mail className="icon" />
             <span>shubhamprakash2000513@gmail.com</span>
           </div>
         </div>

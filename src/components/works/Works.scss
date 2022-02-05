@@ -1,3 +1,163 @@
-.works{
-    background-color: rgb(2, 250, 23);
+@import "../../global.scss";
+
+.works {
+  background-color: $mainColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: rgb(81,107,235);
+background: linear-gradient(90deg, rgba(81,107,235,1) 0%, rgba(183,240,255,1) 50%, rgba(81,107,235,1) 100%);
+h1 {
+  align-self: flex-start;
+  font-size: 50px;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+  letter-spacing:3px;
+  -webkit-text-stroke-color: $mainColor;
+  transform: skew(-5deg);
+  &:before {
+    content:'';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 2px;
+    color: $mainColor;
+    background-color:$mainColor;
+  }
+
+  @include mobile{
+    font-size: 20px;
+  }
+}
+  .arrow {
+    height: 50px;
+    position: absolute;
+    cursor: pointer;
+
+    @include mobile {
+      display: none;
+    }
+
+    &.left {
+      left: 100px;
+      transform: rotateY(180deg);
+    }
+
+    &.right {
+      right: 100px;
+    }
+  }
+
+  .slider {
+    height: 400px;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: all 1s ease-out;
+
+    @include mobile {
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding:15px;
+
+      .item {
+        width: 700px;
+        height: 100%;
+        background-color: white;
+        box-shadow: 0px 5px 10px rgba(0,0,0, 0.3);
+        border-radius: 20px 5px 20px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include mobile {
+          width: 80%;
+          height: 150px;
+          margin: 15px 0;
+        }
+
+        .left {
+          flex: 4;
+          height: 80%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .leftContainer {
+            width: 90%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .imgContainer {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background-color: rgb(245, 179, 155);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              @include mobile {
+                width: 20px;
+                height: 20px;
+              }
+
+              img {
+                width: 25px;
+
+                @include mobile {
+                  width: 15px;
+                }
+              }
+            }
+            h2 {
+              font-size: 20px;
+
+              @include mobile{
+                font-size: 13px;
+              }
+            }
+            p {
+              font-size: 13px;
+              @include mobile{
+                display: none;
+              }
+            }
+            span {
+              font-size: 12px;
+              font-weight: 600;
+              text-decoration: underline;
+              cursor: pointer;
+            }
+          }
+        }
+        .right {
+          flex: 8;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+
+          img {
+            width: 400px;
+            transform: rotate(-10deg);
+          }
+        }
+      }
+    }
+  }
 }
