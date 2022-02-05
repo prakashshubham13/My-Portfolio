@@ -1,0 +1,10 @@
+$mainColor: #516BEB;
+$textColor:rgb(207, 207, 207);
+
+$width: 768px;
+
+@mixin mobile {
+    @media (max-width: #{$width}){
+        @content
+    }
+}
