@@ -72,7 +72,7 @@ export default function Portfolio() {
       </ul>
       <div className="container">
         {data.map((d) => (
-<a href="#">
+<a href="/">
           <div className="item">
             <img
               src={d.img}
