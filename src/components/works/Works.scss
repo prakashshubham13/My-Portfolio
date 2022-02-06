@@ -20,8 +20,8 @@ h1 {
   &:before {
     content:'';
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 0%;
+    left: 0%;
     width: 80%;
     height: 2px;
     color: $mainColor;
@@ -80,6 +80,9 @@ h1 {
         display: flex;
         align-items: center;
         justify-content: center;
+        &:hover >.right img{
+          transform: scale(2.5);
+        }
 
         @include mobile {
           width: 80%;
@@ -105,7 +108,7 @@ h1 {
               width: 40px;
               height: 40px;
               border-radius: 50%;
-              background-color: rgb(245, 179, 155);
+              background-color: $mainColor;
               display: flex;
               align-items: center;
               justify-content: center;
@@ -154,7 +157,9 @@ h1 {
 
           img {
             width: 400px;
+            border-radius:10px;
             transform: rotate(-10deg);
+            transition: transform 2s ease;
           }
         }
       }

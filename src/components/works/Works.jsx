@@ -1,70 +1,63 @@
-import { useState } from "react";
-import './Works.scss'
-import arrow from "../../assets/arrow.png";
+import { useState } from 'react';
+import './Works.scss';
+import arrow from '../../assets/arrow.png';
 
 export default function Works() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const data = [
     {
-      id: "1",
-      icon: "./assets/mobile.png",
-      title: "Web Design",
-      desc:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      img:
-        "https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      id: '1',
+      icon: '',
+      title: 'Frontend Developer Intern at Epikindifi',
+      desc: 'July 2021 - Present',
+      img: 'assets/e1.png',
     },
     {
-      id: "2",
-      icon: "./assets/globe.png",
-      title: "Mobile Application",
-      desc:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      img:
-        "https://i.pinimg.com/originals/e9/c9/2f/e9c92f7869d682a6fa5a97fb8a298f30.jpg",
+      id: '2',
+      icon: '',
+      title: 'Full Stack Intern at HighRadius',
+      desc: 'January 2021 - June 2021',
+      img: 'assets/e2.png',
     },
     {
-      id: "3",
-      icon: "./assets/writing.png",
-      title: "Branding",
-      desc:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      img:
-        "https://i.pinimg.com/originals/a9/f6/94/a9f69465d972a004ad581f245d6ad581.jpg",
+      id: '3',
+      icon: '',
+      title: 'Web Developer Instructor at College IT Society Konnexions',
+      desc: 'August 2020 - April 2021',
+      img: 'assets/e3.png',
     },
   ];
 
   const handleClick = (way) => {
-    way === "left"
+    way === 'left'
       ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
       : setCurrentSlide(currentSlide < data.length - 1 ? currentSlide + 1 : 0);
-      console.log(currentSlide);
+    console.log(currentSlide);
   };
-  
+
   return (
-    <div className="works" id="works">
-    <h1>Experience</h1>
+    <div className='works' id='works'>
+      <h1>Experience</h1>
       <div
-        className="slider"
+        className='slider'
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
       >
         {data.map((d) => (
-          <div className="container">
-            <div className="item">
-              <div className="left">
-                <div className="leftContainer">
-                  <div className="imgContainer">
-                    <img src={d.icon} alt="" />
+          <div key={d?.id} className='container'>
+            <div className='item'>
+              <div className='left'>
+                <div className='leftContainer'>
+                  <div className='imgContainer'>
+                    <img src={d.icon} alt='' />
                   </div>
                   <h2>{d.title}</h2>
                   <p>{d.desc}</p>
-                  <span>Projects</span>
                 </div>
               </div>
-              <div className="right">
+              <div className='right'>
                 <img
-                  src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                  alt=""
+                  src={d?.img}
+                  alt=''
                 />
               </div>
             </div>
@@ -73,14 +66,14 @@ export default function Works() {
       </div>
       <img
         src={arrow}
-        className="arrow left"
-        alt=""
-        onClick={() => handleClick("left")}
+        className='arrow left'
+        alt=''
+        onClick={() => handleClick('left')}
       />
       <img
         src={arrow}
-        className="arrow right"
-        alt=""
+        className='arrow right'
+        alt=''
         onClick={() => handleClick()}
       />
     </div>

@@ -1,3 +1,179 @@
-.contact{
-    background-color: rgb(229, 255, 0);
+@import "../../global.scss";
+
+.contact {
+  background-color:white;
+  display: flex;
+  position: relative;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  .left {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+img{
+    height:100%;
+    width:100%;
+
+}
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        opacity: 0.6;
+        background-color: $mainColor;
+      }
+      .detail{
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &:after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: white;
+            top: 0;
+            bottom: 0;
+            left: 0%;
+          }
+          ul{
+              
+            margin-left: 20px;
+            list-style: none;
+            
+            li{
+                font-size:25px;
+                padding:10px 0px;
+                font-weight:bold;
+                color:white;
+                @include mobile{
+                    font-size:15px;
+                  }
+                .icon {
+                    font-size: 18px;
+                    margin-right: 5px;
+                    @include mobile{
+                        font-size:10px;
+                      }
+                  }
+        span{
+            color:black;
+        }
+            }
+        }
+      }
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        font-size: 50px;
+        font-size: 50px;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 3px;
+        letter-spacing: 3px;
+        -webkit-text-stroke-color: black;
+        transform: skew(-5deg);
+        &:before {
+          content:'';
+          position: absolute;
+          bottom: 0%;
+          left: 0;
+          width: 80%;
+          height: 2px;
+          color: $mainColor;
+          background-color:black;
+        }
+    }
+
+    form {
+      width: 70%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+      input {
+        width: 300px;
+        height: 30px;
+        font-size: 14px;
+        padding:20px 10px;
+        border-radius: 5px;
+        border:1px solid rgb(73, 73, 73);
+        outline: none;
+        &:focus{
+            outline:none;
+            border:1px solid $mainColor;
+        }
+
+        @include mobile {
+          width: 200px;
+          height: 20px;
+        }
+      }
+
+      textarea {
+        width: 300px;
+        height: 200px;
+        font-size: 14px;
+        resize: none;
+        padding:20px 10px;
+        border-radius: 5px;
+        border:1px solid rgb(73, 73, 73);
+        outline: none;
+        &:focus{
+            outline:none;
+            border:1px solid $mainColor;
+        }
+
+        @include mobile {
+          width: 200px;
+          height: 100px;
+        }
+      }
+
+      button {
+        width: 150px;
+        height: 30px;
+        color: white;
+        background-color: $mainColor;
+        box-shadow:0px 8px 15px 0 rgba(66, 66, 66, 0.25),
+        inset -8px 8px 16px 0 rgba(219, 219, 219, 0.25),
+        inset 8px 8px 16px 0 rgba(233, 233, 233, 0.2);
+        border: none;
+        border-radius: 10px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 1s ease;
+        &:hover{
+        box-shadow:0px 0px 0px 0 rgba(0,0,0,.25),
+        inset -8px 8px 16px 0 rgba(219, 219, 219, 0.25),
+        inset 8px 8px 16px 0 rgba(233, 233, 233, 0.2);
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      span {
+        color: green;
+      }
+    }
+  }
 }

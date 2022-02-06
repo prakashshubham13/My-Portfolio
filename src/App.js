@@ -5,6 +5,7 @@ import Works from './components/works/Works';
 import Portfolio from './components/portfolio/Portfolio';
 import { useState } from "react";
 import Menu from './components/menu/Menu';
+import Contact from './components/contact/Contact';
 const App = () => {
   const [menuOpen,setMenuOpen] = useState(false);
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Intro/>
       <Portfolio/>
       <Works/>
+      <Contact/>
     </div>
    </div>
   )

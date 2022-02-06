@@ -1,68 +1,61 @@
-import {useEffect,useState} from 'react'
+import { useEffect, useState } from 'react';
 import PortfolioList from '../portfoliolist/PortfolioList';
-import "./Portfolio.scss";
+import './Portfolio.scss';
 import {
-  featuredPortfolio,
-  webPortfolio,
-  mobilePortfolio,
-  designPortfolio,
-  contentPortfolio,
-} from "../../data";
+  featuredProject,
+  webApp,
+  cssProject,
+  jsProject
+} from '../../data';
 
 export default function Portfolio() {
-  const [selected, setSelected] = useState("featured");
+  const [selected, setSelected] = useState('featured');
   const [data, setData] = useState([]);
   const list = [
     {
-      id: "featured",
-      title: "Featured",
+      id: 'featured',
+      title: 'Featured',
     },
     {
-      id: "web",
-      title: "Web App",
+      id: 'web',
+      title: 'Web App',
     },
     {
-      id: "mobile",
-      title: "Mobile App",
+      id: 'css',
+      title: 'Css Projects',
     },
     {
-      id: "design",
-      title: "Design",
-    },
-    {
-      id: "content",
-      title: "Content",
+      id: 'js',
+      title: 'Js Project',
     },
   ];
 
   useEffect(() => {
     switch (selected) {
-      case "featured":
-        setData(featuredPortfolio);
+      case 'featured':
+        setData(featuredProject);
         break;
-      case "web":
-        setData(webPortfolio);
+      case 'web':
+        setData(webApp);
         break;
-      case "mobile":
-        setData(mobilePortfolio);
+      case 'css':
+        setData(cssProject);
         break;
-      case "design":
-        setData(designPortfolio);
-        break;
-      case "content":
-        setData(contentPortfolio);
+      case 'js':
+        setData(jsProject);
         break;
       default:
-        setData(featuredPortfolio);
+        setData(featuredProject);
     }
   }, [selected]);
 
   return (
-    <div className="portfolio" id="portfolio">
-      <h1>Portfolio</h1>
+    <div className='portfolio' id='portfolio'>
+      <h1>Project</h1>
       <ul>
         {list.map((item) => (
           <PortfolioList
+            key={item.id}
             title={item.title}
             active={selected === item.id}
             setSelected={setSelected}
@@ -70,17 +63,14 @@ export default function Portfolio() {
           />
         ))}
       </ul>
-      <div className="container">
+      <div className='container'>
         {data.map((d) => (
-<a href="/">
-          <div className="item">
-            <img
-              src={d.img}
-              alt=""
-            />
-            <h3>{d.title}</h3>
-          </div>
-</a>
+          <a key={d.id} href={d.link} target='_blank' rel="noreferrer">
+            <div className='item'>
+              <img src={d.img} alt='' />
+              <h3>{d.title}</h3>
+            </div>
+          </a>
         ))}
       </div>
     </div>
