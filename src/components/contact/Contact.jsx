@@ -3,7 +3,7 @@ import './Contact.scss';
 import { Person, Mail } from '@material-ui/icons';
 
 export default function Contact() {
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState('hh');
   const [formData, setFormData] = useState({});
 
   const updateForm = (e) => {
@@ -11,12 +11,12 @@ export default function Contact() {
   };
   const formSubmit = (e) => {
     e.preventDefault();
-    (formData.email.match(
+    (formData?.email?.match(
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     ) &&
-      formData.mssg &&
-      setMessage("I'll reply to you ASAP")) ||
-      setMessage('Invalid Inputs');
+      formData?.mssg)
+      ?setMessage("I'll reply to you ASAP")
+      :setMessage('Invalid Inputs');
   };
   return (
     <div className='contact' id='contact'>
@@ -37,7 +37,7 @@ export default function Contact() {
       </div>
       <div className='right'>
         <h2>Contact.</h2>
-        <form onSubmit={formSubmit}>
+        <form>
           <input
             type='email'
             name='email'
@@ -51,7 +51,7 @@ export default function Contact() {
             value={formData?.mssg}
             onChange={updateForm}
           ></textarea>
-          <button type='submit'>Send</button>
+          <button type='submit' onClick={formSubmit}>Send</button>
           {<span>{message}</span>}
         </form>
       </div>
