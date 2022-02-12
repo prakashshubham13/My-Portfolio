@@ -64,7 +64,8 @@ export default function Portfolio() {
         ))}
       </ul>
       <div className='container'>
-        {data.map((d) => (
+        {data.length===0 ? <h2>Nothing Posted Yet.</h2> :
+         data.map((d) => (
           <a key={d.id} href={d.link} target='_blank' rel="noreferrer">
             <div className='item'>
               <img src={d.img} alt='' />

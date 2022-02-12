@@ -3,7 +3,7 @@ import './Contact.scss';
 import { Person, Mail } from '@material-ui/icons';
 
 export default function Contact() {
-  const [message, setMessage] = useState('hh');
+  const [message, setMessage] = useState('');
   const [formData, setFormData] = useState({});
 
   const updateForm = (e) => {
