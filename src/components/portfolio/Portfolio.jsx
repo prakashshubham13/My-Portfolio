@@ -3,9 +3,9 @@ import PortfolioList from '../portfoliolist/PortfolioList';
 import './Portfolio.scss';
 import {
   featuredProject,
-  webApp,
-  cssProject,
-  jsProject
+  webApps,
+  blogs,
+  packages
 } from '../../data';
 
 export default function Portfolio() {
@@ -18,15 +18,15 @@ export default function Portfolio() {
     },
     {
       id: 'web',
-      title: 'Web App',
+      title: 'Web Apps',
     },
     {
-      id: 'css',
-      title: 'Css Projects',
+      id: 'blogs',
+      title: 'Blogs',
     },
     {
-      id: 'js',
-      title: 'Js Project',
+      id: 'packages',
+      title: 'Packages',
     },
   ];
 
@@ -36,13 +36,13 @@ export default function Portfolio() {
         setData(featuredProject);
         break;
       case 'web':
-        setData(webApp);
+        setData(webApps);
         break;
-      case 'css':
-        setData(cssProject);
+      case 'blogs':
+        setData(blogs);
         break;
-      case 'js':
-        setData(jsProject);
+      case 'packages':
+        setData(packages);
         break;
       default:
         setData(featuredProject);
