@@ -1,12 +1,7 @@
 import { useEffect, useState } from 'react';
 import PortfolioList from '../portfoliolist/PortfolioList';
 import './Portfolio.scss';
-import {
-  featuredProject,
-  webApps,
-  blogs,
-  packages
-} from '../../data';
+import { featuredProject, webApps, blogs, packages } from '../../data';
 
 export default function Portfolio() {
   const [selected, setSelected] = useState('featured');
@@ -64,15 +59,26 @@ export default function Portfolio() {
         ))}
       </ul>
       <div className='container'>
-        {data.length===0 ? <h2>Nothing Posted Yet.</h2> :
-         data.map((d) => (
-          <a key={d.id} href={d.link} target='_blank' rel="noreferrer">
-            <div className='item'>
-              <img src={d.img} alt='' />
-              <h3>{d.title}</h3>
+        {data.length === 0 ? (
+          <h2>Nothing Posted Yet.</h2>
+        ) : (
+          data.map((d) => (
+            <div className='card__out' key={d.title}>
+              <div className='item'>
+                <img src={d.img} alt='' />
+                <h3>{d.title}</h3>
+              </div>
+              <div className='project__options'>
+                <a href={d.img} target='_blank' rel='noreferrer'>
+                  Preview
+                </a>
+                <a key={d.id} href={d.link} target='_blank' rel='noreferrer'>
+                  Source Code
+                </a>
+              </div>
             </div>
-          </a>
-        ))}
+          ))
+        )}
       </div>
     </div>
   );

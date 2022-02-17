@@ -1,4 +1,4 @@
-
+@import './global.scss';
 .app{
     height: 100vh;
 
@@ -19,6 +19,23 @@
             width: 100vw;
             height: calc(100vh - 70px);
             scroll-snap-align: start;
+        }
+        .download{
+            background-color: $mainColor;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 8px 10px;
+            position: sticky;
+            top: 90%;
+            left: -10000%;
+            z-index: 99;
+            overflow: auto;
+            font-weight: 600;
+            border-radius: 0 10px 10px 0;
+            text-decoration: none;
+            box-shadow: 2px 2px 2px 0px rgba(255, 255, 255, 0.3);
+            a{
+                text-decoration: none;
+            }
         }
     }
 }

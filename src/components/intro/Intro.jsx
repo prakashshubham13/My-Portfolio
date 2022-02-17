@@ -31,6 +31,7 @@ export default function Intro() {
           <h3>
             A <span ref={textRef}></span>
           </h3>
+          {/* <a href="/images/myw3schoolsimage.jpg" download> Download Resume</a> */}
         </div>
         <a href="#portfolio">
           <img src={down} alt="abc" />

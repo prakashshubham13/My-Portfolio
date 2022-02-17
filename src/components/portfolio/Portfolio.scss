@@ -1,4 +1,4 @@
-@import '../../global.scss';
+@import "../../global.scss";
 
 .portfolio {
   position: relative;
@@ -7,9 +7,9 @@
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  
+
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     right: 10%;
     bottom: 10%;
@@ -17,15 +17,10 @@
     height: 300px;
     opacity: 0.7;
     background-color: $mainColor;
-    background: linear-gradient(
-      70deg,
-      rgb(145, 174, 255) 0%,
-      #516beb 0%,
-      rgb(152, 205, 255) 100%
-    );
+    background: linear-gradient(70deg, rgb(145, 174, 255) 0%, #516beb 0%, rgb(152, 205, 255) 100%);
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     @include mobile {
-      bottom:30%;
+      bottom: 30%;
       width: 150px;
       height: 150px;
     }
@@ -41,14 +36,14 @@
     -webkit-text-stroke-color: black;
     transform: skew(-5deg);
     &:before {
-      content:'';
+      content: "";
       position: absolute;
       bottom: 0%;
       left: 0;
       width: 80%;
       height: 2px;
       color: $mainColor;
-      background-color:black;
+      background-color: black;
     }
 
     @include mobile {
@@ -80,48 +75,78 @@
     @include mobile {
       width: 100%;
     }
-
-    .item {
+    .card__out {
+      background-color: rgb(255, 255, 255);
       width: 240px;
       height: 150px;
+      display: flex;
+      flex-direction: column;
       border-radius: 10px;
       margin: 10px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       color: white;
       position: relative;
       transition: all 0.5s ease;
       overflow: hidden;
-      cursor: pointer;
-      box-shadow: -4px 4px 5px 0px rgba(0, 0, 0, 0.5),
-        inset -12px 12px 5px 0px rgba(255, 255, 255, 0.5),
-        inset 12px -12px 5px 0px rgba(255, 255, 255, 0.5);
-
+      box-shadow: -4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+      // inset -12px 12px 5px 0px rgba(255, 255, 255, 0.5),
+      // inset 12px -12px 5px 0px rgba(255, 255, 255, 0.5);
       @include mobile {
         width: 130px;
         height: 100px;
       }
-
-      h3 {
-        position: absolute;
-        font-size: 20px;
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 1;
-        transition: 2.5s;
-      }
-
-      &:hover {
+      &:hover > .item {
         background-color: $mainColor;
         img {
           opacity: 0.2;
           z-index: 0;
           transform: scale(2);
+        }
+      }
+
+      .item {
+        overflow: hidden;
+        width: 100%;
+        height: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h3 {
+          position: absolute;
+          font-size: 20px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: 1;
+          transition: 2.5s;
+        }
+      }
+      .project__options {
+        display: flex;
+        margin: auto;
+        a {
+          background-color: rgb(197, 255, 109);
+          padding: 2px 6px;
+          margin: 2px;
+          text-decoration: none;
+          color: white;
+          font-weight: 600;
+          font-size: 12px;
+          border-radius: 5px;
+          cursor: pointer;
+          &:hover {
+            background-color: rgb(159, 255, 14);
+            color: black;
+          }
+          &:nth-child(2) {
+            background-color: rgb(255, 154, 174);
+            &:hover {
+              background-color: rgb(255, 47, 89);
+            }
+          }
         }
       }
     }
