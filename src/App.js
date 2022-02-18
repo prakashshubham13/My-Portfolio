@@ -14,7 +14,10 @@ const App = () => {
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="sections">
-        <a className='download' href="assets/Shubham Resume.pdf" download>Download Resume <CloudDownload className='icon' /></a>
+
+        <a className='download' href="assets/Shubham Resume.pdf" download>
+        <span className='tooltip'>Download Resume</span>
+          <CloudDownload className='icon' /></a>
         <Intro />
         <Portfolio />
         <Works />
