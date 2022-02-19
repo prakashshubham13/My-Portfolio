@@ -90,6 +90,16 @@ export const featuredProject = [
       link:"https://github.com/prakashshubham13/Kiit-space-backend/tree/main"  
     },
   ];
+
+  export const mobile = [
+    {
+      id: 3,
+      title: "Todo App",
+      img:
+        "assets/m1.png",
+      link:"https://github.com/prakashshubham13/Todo-Mobile-App"  
+    },
+  ];
   
   export const webApps = [
     {
