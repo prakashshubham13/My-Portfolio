@@ -66,6 +66,30 @@ export const featuredProject = [
       link:"https://medium.com/@shubhamprakash2000513/print-prime-number-up-to-n-in-java-sieve-of-eratosthenes-123f25a1d265"  
     },
   ];
+
+  export const api = [
+    {
+      id: 1,
+      title: "Treatment Manager",
+      img:
+        "assets/api1.png",
+      link:"https://github.com/prakashshubham13/Treatment-Api"  
+    },
+    {
+      id: 2,
+      title: "User Management System",
+      img:
+        "assets/api2.png",
+      link:"https://github.com/prakashshubham13/User-management-system"  
+    },
+    {
+      id: 3,
+      title: "College blog api",
+      img:
+        "assets/api3.png",
+      link:"https://github.com/prakashshubham13/Kiit-space-backend/tree/main"  
+    },
+  ];
   
   export const webApps = [
     {

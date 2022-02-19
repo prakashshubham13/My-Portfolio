@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import PortfolioList from '../portfoliolist/PortfolioList';
 import './Portfolio.scss';
-import { featuredProject, webApps, blogs, packages } from '../../data';
+import { featuredProject, webApps, blogs, packages, api } from '../../data';
 
 export default function Portfolio() {
   const [selected, setSelected] = useState('featured');
@@ -20,6 +20,10 @@ export default function Portfolio() {
       title: 'Blogs',
     },
     {
+      id: 'api',
+      title: 'Api',
+    },
+    {
       id: 'packages',
       title: 'Packages',
     },
@@ -36,6 +40,9 @@ export default function Portfolio() {
       case 'blogs':
         setData(blogs);
         break;
+        case 'api':
+          setData(api);
+          break;  
       case 'packages':
         setData(packages);
         break;
