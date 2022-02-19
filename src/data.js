@@ -51,6 +51,20 @@ export const featuredProject = [
         "assets/b1.png",
       link:"https://medium.com/@shubhamprakash2000513/infinite-function-currying-in-javascript-faea49a907fd"  
     },
+    {
+      id: 2,
+      title: "Center a div",
+      img:
+        "assets/b3.png",
+      link:"https://medium.com/@shubhamprakash2000513/infinite-function-currying-in-javascript-faea49a907fd"  
+    },
+    {
+      id: 3,
+      title: "Prime Sieve",
+      img:
+        "assets/b2.png",
+      link:"https://medium.com/@shubhamprakash2000513/print-prime-number-up-to-n-in-java-sieve-of-eratosthenes-123f25a1d265"  
+    },
   ];
   
   export const webApps = [
