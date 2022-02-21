@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import PortfolioList from '../portfoliolist/PortfolioList';
 import './Portfolio.scss';
-import { featuredProject, webApps, blogs, packages, api, mobile } from '../../data';
+import { featuredProject, webApps, blogs, packages, api, mobile, desktop } from '../../data';
 
 export default function Portfolio() {
   const [selected, setSelected] = useState('featured');
@@ -31,6 +31,10 @@ export default function Portfolio() {
       id: 'mobile',
       title: 'Mobile Apps',
     },
+    {
+      id: 'desktop',
+      title: 'Desktop Apps',
+    },
   ];
 
   useEffect(() => {
@@ -53,6 +57,9 @@ export default function Portfolio() {
         case 'mobile':
           setData(mobile);
           break;
+         case 'desktop':
+          setData(desktop);
+          break; 
       default:
         setData(featuredProject);
     }

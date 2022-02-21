@@ -148,4 +148,13 @@ export const featuredProject = [
         link:"https://www.npmjs.com/package/my-math-helper" 
       }
   ];
-  
+
+  export const desktop = [
+    {
+      id: 1,
+      title: "SX Code Editor",
+      img:
+        "assets/el.png",
+      link:"https://github.com/prakashshubham13/Sx-code-editor" 
+    }
+];

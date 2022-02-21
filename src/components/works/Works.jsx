@@ -15,7 +15,7 @@ export default function Works() {
     {
       id: '2',
       icon: '',
-      title: 'Frontend Intern at HighRadius',
+      title: 'Full Stack Intern at HighRadius',
       desc: 'January 2021 - June 2021',
       img: 'assets/e2.png',
     },
