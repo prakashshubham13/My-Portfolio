@@ -6,6 +6,13 @@ export default function Works() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const data = [
     {
+      id: '0',
+      icon: '',
+      title: 'Software Development Engineer at AVRL',
+      desc: 'April 2022 - Present',
+      img: 'assets/e1.png',
+    },
+    {
       id: '1',
       icon: '',
       title: 'Frontend Developer Intern at Epikindifi',

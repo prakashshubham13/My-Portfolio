@@ -1,5 +1,13 @@
 export const featuredProject = [
   {
+    id: 0,
+    title: "Scribl Clone",
+    img:
+      "assets/scribbl.png",
+    link:"https://github.com/prakashshubham13/My-Portfolio",
+    deployed_link:"https://my-skribbl-clone-frontend.onrender.com"  
+  },
+  {
     id: 1,
     title: "My Portfolio",
     img:

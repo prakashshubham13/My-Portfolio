@@ -15,7 +15,7 @@ const App = () => {
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="sections">
 
-        <a className='download' href="assets/Shubham Resume.pdf" download>
+        <a className='download' href="assets/Shubham Prakash Resume.pdf" download>
         <span className='tooltip'>Download Resume</span>
           <CloudDownload className='icon' /></a>
         <Intro />

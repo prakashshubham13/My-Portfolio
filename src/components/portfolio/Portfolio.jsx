@@ -90,8 +90,8 @@ export default function Portfolio() {
                 <h3>{d.title}</h3>
               </div>
               <div className='project__options'>
-                <a href={d.img} target='_blank' rel='noreferrer'>
-                  Preview
+                <a href={d?.deployed_link} style={d?.deployed_link?{}:{background:'grey',pointerEvents:'none'}} target='_blank' rel='noreferrer'>
+                  Open
                 </a>
                 <a key={d.id} href={d.link} target='_blank' rel='noreferrer'>
                   Source Code
